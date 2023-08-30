@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eeeeee;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-areas: 
+        "header header header header header"
+        "section1 section1 section1 section1 section1"
+        "section2 section2 section2 section3 section3"
+        "section4 section4 section5 section5 section5"
+        "footer footer footer footer footer"
+}
+header{
+    grid-area: header;
+    background: rgb(219,218,178);
+    background: radial-gradient(circle, rgba(219,218,178,1) 2%, rgba(200,200,149,1) 79%);
+    display: flex;
+    justify-content: space-between;
+}
+.section1{
+    grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+}
+.section3{
+    grid-area: section3;
+}
+.section4{
+    grid-area: section4;
+}
+.section5{
+    grid-area: section5;
+}
+footer{
+    grid-area: footer;
+    background: rgb(219,218,178);
+    background: radial-gradient(circle, rgba(219,218,178,1) 2%, rgba(200,200,149,1) 79%);
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #425059;
+    font-family: 'Poppins', sans-serif;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #425059;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    margin: 5px;
+}
+h3{
+    font-size: 1rem;
+    text-align: center;
+    color: #425059;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    padding: 5px;
+    margin: 5px;
+}
+h4{
+    font-size: 1rem;
+    color: #262f35;
+    padding: 7px;
+    font-family: 'Poppins', sans-serif;
+}
+.logoWok{
+    width: 150px;
+    padding: 10px;
+}
+.menu{
+    font-size: medium;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-align: right;
+}
+.menu li{
+    display: inline-block;
+    text-align: right;
+}
+.menu li a{
+    padding: 20px;
+    color: #262f35;
+    text-decoration: none;
+    display: inline-block;
+}
+.menu li a:hover{
+    color: #eeeeee;
+    background-color: #262f35;
+    border-radius: 10%;
+}
+.menu li a:active{
+    color: #262f35;
+    background-color: #eeeeee;
+    border-radius: 10%;
+}
+.banner1{
+    width: 1080px;
+    border-radius: 1rem;
+}
+.sectionImage{
+    text-align: center;
+}
+p{
+    padding: 1rem;
+    line-height: 1.5;
+    color: #425059;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    color: #262f35;
+}
+.parrafoComent{
+    padding: 1rem;
+    line-height: 1.5;
+    color: #425059;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+.cajaComent{
+    width: 200;
+    height: 400;
+    background-color: #ffffff;
+    padding: 20;
+    margin: 30px;
+    border-radius: 1rem;
+}
+.iconoWhatsapp{
+    position:fixed;
+    bottom:20px;
+    right:25px;
+}
+.imgPortfolio{
+    width: 500px;
+}
