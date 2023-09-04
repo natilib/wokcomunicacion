@@ -6,41 +6,74 @@
 body{
     background-color: #eeeeee;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.3fr;
-    grid-template-areas: 
-        "header header header header header"
-        "section1 section1 section1 section1 section1"
-        "section2 section2 section2 section3 section3"
-        "section4 section4 section5 section5 section5"
-        "footer footer footer footer footer"
-}
 header{
-    grid-area: header;
     background: rgb(219,218,178);
     background: radial-gradient(circle, rgba(219,218,178,1) 2%, rgba(200,200,149,1) 79%);
     display: flex;
     justify-content: space-between;
 }
-.section1{
-    grid-area: section1;
+
+/**Acá comienza la grid de Portfolio**/
+
+.contenedorPortfolio{
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+    "ab ab c"
+    "d ef ef"
+    "gh gh i"
+    "j kl kl"
+    ;
 }
-.section2{
-    grid-area: section2;
+.ab{
+    grid-area: ab;
 }
-.section3{
-    grid-area: section3;
+.c{
+    grid-area: c;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.section4{
-    grid-area: section4;
+.d{
+    grid-area: d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.section5{
-    grid-area: section5;
+.ef{
+    grid-area: ef;
 }
+.gh{
+    grid-area: gh;
+}
+.i{
+    grid-area: i;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.j{
+    grid-area: j;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.kl{
+    grid-area: kl;
+}
+.pf{
+    width: 100%;
+    border-radius: 1rem;
+}
+/**Acá termina la grid de Portfolio**/
+
 footer{
-    grid-area: footer;
     background: rgb(219,218,178);
     background: radial-gradient(circle, rgba(219,218,178,1) 2%, rgba(200,200,149,1) 79%);
     font-family: 'Poppins', sans-serif;
@@ -64,22 +97,25 @@ h3{
     text-align: center;
     color: #425059;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     padding: 5px;
     margin: 5px;
 }
 h4{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #262f35;
     padding: 7px;
-    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
 }
 .logoWok{
     width: 150px;
     padding: 10px;
 }
 .menu{
-    font-size: medium;
+    font-size: 90%;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
     list-style: none;
@@ -141,6 +177,17 @@ a{
     bottom:20px;
     right:25px;
 }
-.imgPortfolio{
-    width: 500px;
+
+@media screen and (max-width:768px){
+    .contenedorPortfolio{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        grid-template-areas:
+        "ab ab c"
+        "d ef ef"
+        "gh gh i"
+        "j kl kl"
+        ;
+    } 
 }
